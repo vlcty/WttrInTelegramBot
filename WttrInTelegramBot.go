@@ -36,7 +36,7 @@ func main() {
 
             log.Printf("[%s] %s", update.Message.From.UserName, command)
 
-            if ( command == "/info") {
+            if ( command == "/start" ) {
                 msg := tgbotapi.NewMessage(update.Message.Chat.ID, "Type \"/weather Place\" to get the current weather")
                 bot.Send(msg)
             } else if strings.HasPrefix(command, "/weather") {
